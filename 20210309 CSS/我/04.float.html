@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* container 可以隨著拉動佔據整個版面，75% 是以版面的75%為最大 */
+        .container {
+            width: 75%;
+            margin: 2rem auto;
+            background: #ffa;
+            padding: 1rem;
+        }
+
+        /* 
+        float 會從正常流向獨立出來(左到右 上到下)，移動到浮動層，後方元素會在 float 元素下方，元素裡面文字內容會圍繞著 float 元素，相當於浮起來所以背景色會覆蓋到圖片
+        float 只有 left right
+        用 float 後會變區塊元素的特性
+         */
+        .float-left {
+            float: left;
+            margin: 1rem;
+        }
+
+        .float-right {
+            float: right;
+            margin: 1rem;
+        }
+
+        .clear-both {
+            clear: both;
+        }
+
+        p {
+            background: black;
+            color: white;
+            padding: 1ren;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>float-left</h2>
+        <img class="float-left" src="https://picsum.photos/200/200/?random=1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ipsa. Minima odit neque tempore quas
+            quisquam. Explicabo deserunt quibusdam laudantium. Quo nemo
+        </p>
+        <p class="clear-both">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore modi repellendus, at
+            maxime nisi aspernatur
+            labore, rem ad voluptatibus quo ipsa iusto nobis. Assumenda ad eius labore nemo optio ratione!</p>
+
+        <hr>
+
+        <h2>float-left和float-right</h2>
+        <img style="float: left;" src="https://picsum.photos/200/200/?random=1">
+        <img style="float: right;" src="https://picsum.photos/200/200/?random=1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, deserunt? Molestiae, voluptatem deleniti
+            nam assumenda cum non. Officiis unde magni est maiores cupiditate enim architecto deleniti, reiciendis nemo
+            ipsa. Deleniti adipisci nostrum laborum nobis atque reiciendis consequatur, iusto corrupti! Adipisci omnis,
+            non voluptatum voluptate voluptates labore repellat consequatur. Sunt quisquam expedita optio fugiat a
+            soluta incidunt nam possimus, aperiam explicabo, aliquid in animi nihil, cum quaerat perferendis
+            repudiandae. Commodi aperiam deserunt repudiandae debitis, omnis soluta provident voluptates veniam odit
+            temporibus consequuntur maxime officia! Nisi cum eum praesentium dolore provident at ad enim repellendus
+            illo, atque, iste recusandae, adipisci neque distinctio.</p>
+        <p style="clear: both;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, deserunt? Molestiae,
+            voluptatem deleniti
+            nam assumenda cum non. Officiis unde magni est maiores cupiditate enim architecto deleniti, reiciendis nemo
+            ipsa. Deleniti adipisci nostrum laborum nobis atque reiciendis consequatur, iusto corrupti! Adipisci omnis,
+            non voluptatum voluptate voluptates labore repellat consequatur. Sunt quisquam expedita optio fugiat a
+            soluta incidunt nam possimus, aperiam explicabo, aliquid in animi nihil, cum quaerat perferendis
+            repudiandae. Commodi aperiam deserunt repudiandae debitis, omnis soluta provident voluptates veniam odit
+            temporibus consequuntur maxime officia! Nisi cum eum praesentium dolore provident at ad enim repellendus
+            illo, atque, iste recusandae, adipisci neque distinctio.</p>
+    </div>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: left;
+        }
+    </style>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+
+</body>
+
+</html>
